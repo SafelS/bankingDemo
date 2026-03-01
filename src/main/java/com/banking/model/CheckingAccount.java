@@ -4,7 +4,7 @@ import com.banking.exception.InsufficientFundsException;
 
 public class CheckingAccount extends Account implements Transferable{
 
-    private double draftLimit;
+    private final double draftLimit;
 
     public CheckingAccount(String id, String owner, double initialBalance, double draftLimit){
         super(id, owner, initialBalance);

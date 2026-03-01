@@ -11,7 +11,7 @@ public class Account {
 
     public Account(String id,String owner, double initialBalance) {
         if(initialBalance < 0) {
-            throw new IllegalArgumentException("initial balance cannot be negative");
+            throw new IllegalArgumentException("Initial balance cannot be negative");
         }
 
         this.id = id;
@@ -21,14 +21,14 @@ public class Account {
 
     public void deposit(double amount) {
         if(amount <= 0) {
-            throw new IllegalArgumentException("amount cannot be negative");
+            throw new IllegalArgumentException("Deposit amount cannot be negative");
         }
         balance += amount;
     }
 
     public void withdraw(double amount) {
         if(amount <= 0) {
-            throw new IllegalArgumentException("amount cannot be negative");
+            throw new IllegalArgumentException("Withdraw amount cannot be negative");
         }
         if(amount > balance) {
             throw new InsufficientFundsException("Not enough Balance");
